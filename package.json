@@ -1,0 +1,68 @@
+{
+  "name": "fastifyjs-supabase-auth",
+  "version": "0.1.0",
+  "description": "Fastify plugin for authenticating Supabase JWT tokens with optional JWKS support.",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "types": "./dist/index.d.ts"
+    }
+  },
+  "files": [
+    "dist",
+    "*.md"
+  ],
+  "scripts": {
+    "build": "tsc --project tsconfig.build.json",
+    "dev": "tsc --watch",
+    "test": "mocha -r ts-node/register test/**/*.test.ts",
+    "prepare": "npm run build",
+    "format": "prettier --write \"src/**/*.ts\"",
+    "lint": "eslint . --fix"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/ozers/fastifyjs-supabase-auth"
+  },
+  "bugs": {
+    "url": "https://github.com/ozers/fastifyjs-supabase-auth/issues"
+  },
+  "homepage": "https://github.com/ozers/fastifyjs-supabase-auth#readme",
+  "keywords": [
+    "fastify",
+    "supabase",
+    "jwt",
+    "auth",
+    "jwks",
+    "plugin",
+    "authentication"
+  ],
+  "author": "Ozer Subasi",
+  "license": "MIT",
+  "dependencies": {
+    "@supabase/supabase-js": "^2.49.4",
+    "dotenv": "^16.5.0",
+    "fastify-plugin": "^4.5.0",
+    "jsonwebtoken": "^9.0.0",
+    "jwks-rsa": "^3.1.0"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.26.0",
+    "@types/chai": "^5.2.2",
+    "@types/jsonwebtoken": "^9.0.2",
+    "@types/mocha": "^10.0.10",
+    "@types/node": "^20.0.0",
+    "@typescript-eslint/eslint-plugin": "^8.32.1",
+    "@typescript-eslint/parser": "^8.32.1",
+    "chai": "^5.2.0",
+    "eslint": "^9.26.0",
+    "eslint-config-prettier": "^10.1.5",
+    "eslint-plugin-prettier": "^5.4.0",
+    "mocha": "^11.2.2",
+    "prettier": "^3.5.3",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.8.3"
+  }
+}
