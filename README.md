@@ -1,0 +1,1 @@
+# fastifyjs-supabase-auth
