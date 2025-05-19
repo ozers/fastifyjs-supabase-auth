@@ -13,6 +13,10 @@ Authenticate Supabase users in your Fastify app using their JWT access tokens �
 - ✅ Route prefix based authentication
 - ✅ Flexible route-level authentication configuration
 
+## Projects Using This Package
+
+- [Yayınlıyor](https://www.yayinliyor.com/) - A new book writing & reading platform from Türkiye.
+
 ## Why use this plugin?
 
 Manually authenticating Supabase JWTs in Fastify means repeating the same logic across routes: header parsing, verification, error handling, and payload attachment.
@@ -110,7 +114,6 @@ _See [`examples/example.ts`](examples/example.ts) for a full working demo._
 - Routes outside the prefix will be public by default
 
 ### Route-Level Authentication
-- Use `onRequest: [app.authenticate]` to protect specific routes
 - Routes without the authenticate hook will be public
 
 ## License
